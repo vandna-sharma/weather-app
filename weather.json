@@ -1,0 +1,79 @@
+{
+    "cities": [
+      {
+        "name": "Lucknow",
+        "country": "India",
+        "weather": {
+          "temperature": 22,
+          "humidity": 65,
+          "conditions": "Partly Cloudy"
+        }
+      },
+      {
+        "name": "Jaipur",
+        "country": "India",
+        "weather": {
+          "temperature": 15,
+          "humidity": 75,
+          "conditions": "Rainy"
+        }
+      },
+      {
+        "name": "Pune",
+        "country": "India",
+        "weather": {
+          "temperature": 28,
+          "humidity": 50,
+          "conditions": "Sunny"
+        }
+      },
+      {
+        "name": "Ahmedabad",
+        "country": "India",
+        "weather": {
+          "temperature": 25,
+          "humidity": 60,
+          "conditions": "Clear Sky"
+        }
+      },
+      {
+        "name": "Mumbai",
+        "country": "India",
+        "weather": {
+          "temperature": 30,
+          "humidity": 70,
+          "conditions": "Hazy"
+        }
+      },
+      {
+        "name": "Delhi",
+        "country": "India",
+        "weather": {
+          "temperature": 28,
+          "humidity": 55,
+          "conditions": "Sunny"
+        }
+      },
+     
+      {
+        "name": "Hyderabad",
+        "country": "India",
+        "weather": {
+          "temperature": 20,
+          "humidity": 60,
+          "conditions": "Cloudy"
+        }
+      },
+      {
+        "name": "Kolkata",
+        "country": "India",
+        "weather": {
+          "temperature": 25,
+          "humidity": 70,
+          "conditions": "Rainy"
+        }
+      }
+      
+    ]
+  }
+  

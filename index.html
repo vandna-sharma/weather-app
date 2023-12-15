@@ -1,0 +1,80 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="assets/css/bootstrap.css">
+    <link rel="stylesheet" href="assets/css/style.css">
+    <link rel="stylesheet" href="assets/font-awesome-4.7.0/font-awesome-4.7.0/css/font-awesome.min.css">
+</head>
+<body>
+    <div class="container-fluid main">
+        <div class="row  border border-1 border-secondary">
+            <div class=" col box shadow  rounded text-center  ">
+                <div class="search mt-4 d-flex justify-content-evenly align-items-center">
+                    <input id="input" type="text" class="bg-light rounded rounded-2 border border-secondary  "  placeholder="enter city name..." spellcheck="false">
+                  <button class="btn btn-primary" id="btn">  <i class="fa fa-search text-white"></i></button>
+                </div>
+                <div class="weather text-white">
+                    <img src="assets/images/rainy.png" class="img-fluid weather-icon ">
+                    <h1 id="temp"></h1>
+                    <h2 id="city"></h2>
+                    <p id="humidity"></p>
+
+                </div>
+            </div>
+
+        </div>
+
+    </div>
+    
+
+
+
+
+    <script src="assets/js/bootstrap.js"></script>
+    <script src="assets/js/jquery.js"></script>
+    <script>
+          
+       
+
+        fetch('weather.json').then(x=>x.text()).then(y=>displayData(y))
+      
+        function displayData(y){
+        
+           let data=JSON.parse(y)
+           let Allcities=data.cities
+        
+           //allcities ---array
+
+           document.querySelector("#city").innerHTML=Allcities[0].name
+                    document.querySelector("#temp").innerHTML=`${Allcities[0].weather.temperature} &#8451`
+          
+     
+
+        $("#btn").click(function(){
+            let input=document.querySelector("#input").value
+            for(let i=0; i<Allcities.length; i++){
+                if(Allcities[i].name==input){
+                
+                    document.querySelector("#city").innerHTML=Allcities[i].name
+                    document.querySelector("#temp").innerHTML=`${Allcities[i].weather.temperature} &#8451`
+        
+                }
+            }
+            
+            
+          
+         })
+       
+
+       
+        
+        
+        }
+     
+            
+    </script>
+</body>
+</html>
